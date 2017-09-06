@@ -1,0 +1,1 @@
+该目录存放elasticsearch的数据

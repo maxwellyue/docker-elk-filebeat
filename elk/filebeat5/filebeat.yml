@@ -1,0 +1,9 @@
+filebeat:
+  prospectors:
+    - paths:
+        - /home/laoyue/github/docker-elk/log/test.log #日志文件地址
+      input_type: log #从文件中读取
+      tail_files: false #以文件末尾开始读取数据
+output:
+  logstash:
+      hosts: ["182.254.151.43:5044"] #填写logstash的访问IP

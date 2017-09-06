@@ -1,0 +1,11 @@
+version: '2'
+services:
+  filebeat:
+    image: prima/filebeat:latest 
+    container_name: filebeat 
+    restart: always
+    network_mode: "bridge"
+    volumes:
+      - ./conf/filebeat.yml:/filebeat.yml
+      - ./logs:/logs
+      - ./registry:/etc/registry

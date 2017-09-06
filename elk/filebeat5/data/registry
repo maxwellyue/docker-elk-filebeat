@@ -1,0 +1,1 @@
+[{"source":"/home/laoyue/github/docker-elk/log/test.log","offset":225,"FileStateOS":{"inode":606534,"device":64769},"timestamp":"2017-09-04T21:23:30.740580523+08:00","ttl":-1},{"source":"/home/laoyue/github/docker-elk/log/test.log","offset":1000,"FileStateOS":{"inode":606573,"device":64769},"timestamp":"2017-09-04T21:29:00.748570086+08:00","ttl":-1}]

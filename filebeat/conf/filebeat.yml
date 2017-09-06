@@ -1,0 +1,26 @@
+filebeat:
+  prospectors:
+    - input_type: log
+      paths:
+        - /logs/access.log #日志文件地址
+      fields:
+        app_id: cpgl # 应用名称
+        type: nginx #日志类型
+      fields_under_root: true # 让设置的字段变成顶级输出，否则会在fields字段下
+      tail_files: false # 默认就是false
+    - input_type: log
+      paths:
+        - /logs/java*.log #日志文件地址
+      fields:
+        app_id: educloud # 应用名称
+        type: java #日志类型
+      fields_under_root: true # 让设置的字段变成顶级输出，否则会在fields字段下
+      tail_files: false # 默认就是false
+      multiline: # 多行处理    
+        pattern: '^\['
+        match: after
+        negate: true
+  registry_file: /etc/registry/mark # 记录日志读取位置，防止重启后重复读取
+output:
+  logstash:
+      hosts: ["182.254.151.43:5044"] #填写logstash的访问IP

@@ -1,0 +1,183 @@
+[2017-09-05 21:54:37.336] [bogon] [http-nio-8090-exec-3] DEBUG o.a.s.s.mgt.DefaultSessionManager@retrieveSession:218 - Unable to resolve session ID from SessionKey [org.apache.shiro.web.session.mgt.WebSessionKey@621dd965].  Returning null to indicate a session could not be found.
+[2017-09-05 21:54:37.341] [bogon] [http-nio-8090-exec-3] DEBUG org.mybatis.spring.SqlSessionUtils@getSqlSession:97 - Creating a new SqlSession
+[2017-09-05 21:54:37.342] [bogon] [http-nio-8090-exec-3] DEBUG org.mybatis.spring.SqlSessionUtils@registerSessionHolder:148 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6748581e] was not registered for synchronization because synchronization is not active
+[2017-09-05 21:54:37.342] [bogon] [http-nio-8090-exec-3] DEBUG o.s.jdbc.datasource.DataSourceUtils@doGetConnection:110 - Fetching JDBC Connection from DataSource
+java.text.ParseException: Invalid JWS header: Invalid JSON: Unexpected token  at position 0.
+	at com.nimbusds.jose.JWSObject.<init>(JWSObject.java:155)
+	at com.nimbusds.jose.JWSObject.parse(JWSObject.java:421)
+	at com.seentao.educationcloud.modules.sys.util.TokenUtil.getUserId(TokenUtil.java:140)
+	at com.seentao.educationcloud.modules.sys.security.StatelessAuthcFilter.onAccessDenied(StatelessAuthcFilter.java:38)
+	at org.apache.shiro.web.filter.AccessControlFilter.onAccessDenied(AccessControlFilter.java:133)
+	at org.apache.shiro.web.filter.AccessControlFilter.onPreHandle(AccessControlFilter.java:162)
+	at org.apache.shiro.web.filter.PathMatchingFilter.isFilterChainContinued(PathMatchingFilter.java:203)
+	at org.apache.shiro.web.filter.PathMatchingFilter.preHandle(PathMatchingFilter.java:178)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:131)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:96)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[2017-09-05 21:54:37.351] [bogon] [http-nio-8090-exec-3] DEBUG o.m.s.t.SpringManagedTransaction@openConnection:87 - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@7d846396] will not be managed by Spring
+[2017-09-05 21:54:37.351] [bogon] [http-nio-8090-exec-3] DEBUG c.s.e.modules.sys.dao.UserDao.get@debug:181 - ==>  Preparing: select Id, Type, Password, Username, PhoneNumber, Email, QQ, Weixin, DeviceNo, Status, CreateTime, UpdateTime, UpdateUser from sys_user where id = ? 
+[2017-09-05 21:54:37.352] [bogon] [http-nio-8090-exec-3] DEBUG c.s.e.modules.sys.dao.UserDao.get@debug:181 - ==> Parameters: (String)
+[2017-09-05 21:54:37.360] [bogon] [http-nio-8090-exec-3] DEBUG c.s.e.modules.sys.dao.UserDao.get@debug:181 - <==      Total: 0
+[2017-09-05 21:54:37.361] [bogon] [http-nio-8090-exec-3] DEBUG org.mybatis.spring.SqlSessionUtils@closeSqlSession:191 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6748581e]
+[2017-09-05 21:54:37.361] [bogon] [http-nio-8090-exec-3] DEBUG o.s.jdbc.datasource.DataSourceUtils@doReleaseConnection:327 - Returning JDBC Connection to DataSource
+[2017-09-05 21:54:37.361] [bogon] [http-nio-8090-exec-3] DEBUG o.a.shiro.realm.AuthenticatingRealm@getAuthenticationInfo:569 - Looked up AuthenticationInfo [null] from doGetAuthenticationInfo
+[2017-09-05 21:54:37.361] [bogon] [http-nio-8090-exec-3] DEBUG o.a.shiro.realm.AuthenticatingRealm@getAuthenticationInfo:580 - No AuthenticationInfo found for submitted AuthenticationToken [com.seentao.educationcloud.modules.sys.security.StatelessToken@64cea14c].  Returning null.
+[2017-09-05 21:54:37.362] [bogon] [http-nio-8090-exec-3] DEBUG o.a.shiro.web.servlet.SimpleCookie@addCookieHeader:226 - Added HttpServletResponse Cookie [rememberMe=deleteMe; Path=/educloud; Max-Age=0; Expires=Mon, 04-Sep-2017 13:54:37 GMT]
+[2017-09-05 21:54:37.362] [bogon] [http-nio-8090-exec-3] DEBUG o.a.shiro.web.servlet.AdviceFilter@cleanup:194 - Filter execution resulted in an unexpected Exception (not IOException or ServletException as the Filter API recommends).  Wrapping in ServletException and propagating.
+[2017-09-05 21:54:37.363] [bogon] [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet@doService:865 - DispatcherServlet with name 'DispatcherServlet' processing POST request for [/educloud/500]
+[2017-09-05 21:54:37.363] [bogon] [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping@getHandlerInternal:310 - Looking up handler method for path /500
+[2017-09-05 21:54:37.363] [bogon] [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping@getHandlerInternal:317 - Returning handler method [public void com.seentao.educationcloud.common.exception.ErrorController.handlerFilterError(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]
+[2017-09-05 21:54:37.364] [bogon] [http-nio-8090-exec-3] DEBUG o.s.b.f.s.DefaultListableBeanFactory@doGetBean:251 - Returning cached instance of singleton bean 'errorController'
+[2017-09-05 21:54:37.365] [bogon] [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver@resolveException:133 - Resolving exception from handler [public void com.seentao.educationcloud.common.exception.ErrorController.handlerFilterError(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]: org.apache.shiro.ShiroException: org.apache.shiro.authc.UnknownAccountException: Realm [com.seentao.educationcloud.modules.sys.security.StatelessRealm@600c72d5] was unable to find account data for the submitted AuthenticationToken [com.seentao.educationcloud.modules.sys.security.StatelessToken@64cea14c].
+[2017-09-05 21:54:37.365] [bogon] [http-nio-8090-exec-3] DEBUG o.s.b.f.s.DefaultListableBeanFactory@doGetBean:251 - Returning cached instance of singleton bean 'globalExceptionHandler'
+[2017-09-05 21:54:37.365] [bogon] [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver@doResolveHandlerMethodException:375 - Invoking @ExceptionHandler method: net.minidev.json.JSONObject com.seentao.educationcloud.common.exception.GlobalExceptionHandler.handleException(java.lang.Exception)
+[2017-09-05 21:54:37.366] [bogon] [http-nio-8090-exec-3] ERROR c.s.e.c.e.GlobalExceptionHandler@handleException:122 - org.apache.shiro.authc.UnknownAccountException: Realm [com.seentao.educationcloud.modules.sys.security.StatelessRealm@600c72d5] was unable to find account data for the submitted AuthenticationToken [com.seentao.educationcloud.modules.sys.security.StatelessToken@64cea14c].
+org.apache.shiro.ShiroException: org.apache.shiro.authc.UnknownAccountException: Realm [com.seentao.educationcloud.modules.sys.security.StatelessRealm@600c72d5] was unable to find account data for the submitted AuthenticationToken [com.seentao.educationcloud.modules.sys.security.StatelessToken@64cea14c].
+	at com.seentao.educationcloud.common.exception.ErrorController.handlerFilterError(ErrorController.java:41)
+	at sun.reflect.GeneratedMethodAccessor115.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:392)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:349)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.shiro.authc.UnknownAccountException: Realm [com.seentao.educationcloud.modules.sys.security.StatelessRealm@600c72d5] was unable to find account data for the submitted AuthenticationToken [com.seentao.educationcloud.modules.sys.security.StatelessToken@64cea14c].
+	at org.apache.shiro.authc.pam.ModularRealmAuthenticator.doSingleRealmAuthentication(ModularRealmAuthenticator.java:184)
+	at org.apache.shiro.authc.pam.ModularRealmAuthenticator.doAuthenticate(ModularRealmAuthenticator.java:267)
+	at org.apache.shiro.authc.AbstractAuthenticator.authenticate(AbstractAuthenticator.java:198)
+	at org.apache.shiro.mgt.AuthenticatingSecurityManager.authenticate(AuthenticatingSecurityManager.java:106)
+	at org.apache.shiro.mgt.DefaultSecurityManager.login(DefaultSecurityManager.java:270)
+	at org.apache.shiro.subject.support.DelegatingSubject.login(DelegatingSubject.java:256)
+	at com.seentao.educationcloud.modules.sys.security.StatelessAuthcFilter.onAccessDenied(StatelessAuthcFilter.java:40)
+	at org.apache.shiro.web.filter.AccessControlFilter.onAccessDenied(AccessControlFilter.java:133)
+	at org.apache.shiro.web.filter.AccessControlFilter.onPreHandle(AccessControlFilter.java:162)
+	at org.apache.shiro.web.filter.PathMatchingFilter.isFilterChainContinued(PathMatchingFilter.java:203)
+	at org.apache.shiro.web.filter.PathMatchingFilter.preHandle(PathMatchingFilter.java:178)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:131)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:96)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	... 13 common frames omitted
+[2017-09-05 21:54:37.375] [bogon] [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor@writeWithMessageConverters:234 - Written [{"msg":"系统内部错误，请联系管理员。org.apache.shiro.authc.UnknownAccountException: Realm [com.seentao.educationcloud.modules.sys.security.StatelessRealm@600c72d5] was unable to find account data for the submitted AuthenticationToken [com.seentao.educationcloud.modules.sys.security.StatelessToken@64cea14c].","errorCode":5000,"status":"0"}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@2be83a68]
+[2017-09-05 21:54:37.375] [bogon] [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet@processDispatchResult:1044 - Null ModelAndView returned to DispatcherServlet with name 'DispatcherServlet': assuming HandlerAdapter completed request handling
+[2017-09-05 21:54:37.375] [bogon] [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet@processRequest:1000 - Successfully completed request
+[2017-09-05 21:55:42.961] [bogon] [http-nio-8090-exec-5] DEBUG o.s.b.f.s.DefaultListableBeanFactory@doGetBean:251 - Returning cached instance of singleton bean 'environment'
+[2017-09-05 21:55:42.966] [bogon] [http-nio-8090-exec-5] DEBUG o.s.b.f.s.DefaultListableBeanFactory@doGetBean:251 - Returning cached instance of singleton bean 'environment'
+[2017-09-05 21:55:42.969] [bogon] [http-nio-8090-exec-5] DEBUG o.a.s.s.mgt.DefaultSessionManager@retrieveSession:218 - Unable to resolve session ID from SessionKey [org.apache.shiro.web.session.mgt.WebSessionKey@624908af].  Returning null to indicate a session could not be found.
+[2017-09-05 21:55:43.010] [bogon] [http-nio-8090-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils@getSqlSession:97 - Creating a new SqlSession
+[2017-09-05 21:55:43.011] [bogon] [http-nio-8090-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils@registerSessionHolder:148 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6fa1139e] was not registered for synchronization because synchronization is not active
+[2017-09-05 21:55:43.011] [bogon] [http-nio-8090-exec-5] DEBUG o.s.jdbc.datasource.DataSourceUtils@doGetConnection:110 - Fetching JDBC Connection from DataSource
+[2017-09-05 21:55:43.017] [bogon] [http-nio-8090-exec-5] DEBUG o.m.s.t.SpringManagedTransaction@openConnection:87 - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@7d846396] will not be managed by Spring
+[2017-09-05 21:55:43.018] [bogon] [http-nio-8090-exec-5] DEBUG c.s.e.modules.sys.dao.UserDao.get@debug:181 - ==>  Preparing: select Id, Type, Password, Username, PhoneNumber, Email, QQ, Weixin, DeviceNo, Status, CreateTime, UpdateTime, UpdateUser from sys_user where id = ? 
+[2017-09-05 21:55:43.018] [bogon] [http-nio-8090-exec-5] DEBUG c.s.e.modules.sys.dao.UserDao.get@debug:181 - ==> Parameters: 1342c673-b735-40e8-a1c0-ce41e0884e0b(String)
+[2017-09-05 21:55:43.037] [bogon] [http-nio-8090-exec-5] DEBUG c.s.e.modules.sys.dao.UserDao.get@debug:181 - <==      Total: 1
+[2017-09-05 21:55:43.038] [bogon] [http-nio-8090-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils@closeSqlSession:191 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6fa1139e]
+[2017-09-05 21:55:43.038] [bogon] [http-nio-8090-exec-5] DEBUG o.s.jdbc.datasource.DataSourceUtils@doReleaseConnection:327 - Returning JDBC Connection to DataSource
+[2017-09-05 21:55:43.051] [bogon] [http-nio-8090-exec-5] DEBUG o.a.shiro.realm.AuthenticatingRealm@getAuthenticationInfo:569 - Looked up AuthenticationInfo [com.seentao.educationcloud.modules.sys.entity.User@3f352fbf[id=1342c673-b735-40e8-a1c0-ce41e0884e0b,type=0,password=D51F594C38F8DDA40A9F73F00F84451E,username=admin,phoneNumber=<null>,email=<null>,qq=<null>,weixin=<null>,deviceNo=<null>,status=<null>,roleList=<null>,menuList=<null>,teacher=<null>,student=<null>,page=<null>,pageNumber=<null>,pageSize=<null>,createTime=<null>,updateTime=<null>,updateUser=<null>,createUser=<null>]] from doGetAuthenticationInfo
+[2017-09-05 21:55:43.075] [bogon] [http-nio-8090-exec-5] DEBUG o.a.shiro.realm.AuthenticatingRealm@cacheAuthenticationInfoIfPossible:507 - AuthenticationInfo caching is disabled for info [com.seentao.educationcloud.modules.sys.entity.User@3f352fbf[id=1342c673-b735-40e8-a1c0-ce41e0884e0b,type=0,password=D51F594C38F8DDA40A9F73F00F84451E,username=admin,phoneNumber=<null>,email=<null>,qq=<null>,weixin=<null>,deviceNo=<null>,status=<null>,roleList=<null>,menuList=<null>,teacher=<null>,student=<null>,page=<null>,pageNumber=<null>,pageSize=<null>,createTime=<null>,updateTime=<null>,updateUser=<null>,createUser=<null>]].  Submitted token: [com.seentao.educationcloud.modules.sys.security.StatelessToken@536a78df].
+[2017-09-05 21:55:43.075] [bogon] [http-nio-8090-exec-5] DEBUG o.a.s.a.c.SimpleCredentialsMatcher@equals:96 - Performing credentials equality check for tokenCredentials of type [java.lang.String and accountCredentials of type [java.lang.String]
+[2017-09-05 21:55:43.075] [bogon] [http-nio-8090-exec-5] DEBUG o.a.s.a.c.SimpleCredentialsMatcher@equals:102 - Both credentials arguments can be easily converted to byte arrays.  Performing array equals comparison
+[2017-09-05 21:55:43.076] [bogon] [http-nio-8090-exec-5] DEBUG o.a.s.authc.AbstractAuthenticator@authenticate:233 - Authentication successful for token [com.seentao.educationcloud.modules.sys.security.StatelessToken@536a78df].  Returned account [com.seentao.educationcloud.modules.sys.entity.User@3f352fbf[id=1342c673-b735-40e8-a1c0-ce41e0884e0b,type=0,password=D51F594C38F8DDA40A9F73F00F84451E,username=admin,phoneNumber=<null>,email=<null>,qq=<null>,weixin=<null>,deviceNo=<null>,status=<null>,roleList=<null>,menuList=<null>,teacher=<null>,student=<null>,page=<null>,pageNumber=<null>,pageSize=<null>,createTime=<null>,updateTime=<null>,updateUser=<null>,createUser=<null>]]
+[2017-09-05 21:55:43.077] [bogon] [http-nio-8090-exec-5] DEBUG o.a.s.s.s.DefaultSubjectContext@resolveSecurityManager:102 - No SecurityManager available in subject context map.  Falling back to SecurityUtils.getSecurityManager() lookup.
+[2017-09-05 21:55:43.077] [bogon] [http-nio-8090-exec-5] DEBUG o.a.s.s.s.DefaultSubjectContext@resolveSecurityManager:102 - No SecurityManager available in subject context map.  Falling back to SecurityUtils.getSecurityManager() lookup.
+[2017-09-05 21:55:43.077] [bogon] [http-nio-8090-exec-5] DEBUG o.a.shiro.web.servlet.SimpleCookie@addCookieHeader:226 - Added HttpServletResponse Cookie [rememberMe=deleteMe; Path=/educloud; Max-Age=0; Expires=Mon, 04-Sep-2017 13:55:43 GMT]
+[2017-09-05 21:55:43.078] [bogon] [http-nio-8090-exec-5] DEBUG o.a.s.mgt.AbstractRememberMeManager@onSuccessfulLogin:290 - AuthenticationToken did not indicate RememberMe is requested.  RememberMe functionality will not be executed for corresponding account.
+[2017-09-05 21:55:43.078] [bogon] [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet@doService:865 - DispatcherServlet with name 'DispatcherServlet' processing POST request for [/educloud/api/sys/user/get/0564f43ada5d48248b1d22f8b434d776]
+[2017-09-05 21:55:43.078] [bogon] [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping@getHandlerInternal:310 - Looking up handler method for path /api/sys/user/get/0564f43ada5d48248b1d22f8b434d776
+[2017-09-05 21:55:43.091] [bogon] [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping@getHandlerInternal:317 - Returning handler method [public net.minidev.json.JSONObject com.seentao.educationcloud.modules.sys.web.UserController.get(java.lang.String)]
+[2017-09-05 21:55:43.091] [bogon] [http-nio-8090-exec-5] DEBUG o.s.b.f.s.DefaultListableBeanFactory@doGetBean:251 - Returning cached instance of singleton bean 'userController'
+[2017-09-05 21:55:43.138] [bogon] [http-nio-8090-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils@getSqlSession:97 - Creating a new SqlSession
+[2017-09-05 21:55:43.138] [bogon] [http-nio-8090-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils@registerSessionHolder:148 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2391b046] was not registered for synchronization because synchronization is not active
+[2017-09-05 21:55:43.139] [bogon] [http-nio-8090-exec-5] DEBUG o.s.jdbc.datasource.DataSourceUtils@doGetConnection:110 - Fetching JDBC Connection from DataSource
+[2017-09-05 21:55:43.140] [bogon] [http-nio-8090-exec-5] DEBUG o.m.s.t.SpringManagedTransaction@openConnection:87 - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@7d846396] will not be managed by Spring
+[2017-09-05 21:55:43.140] [bogon] [http-nio-8090-exec-5] DEBUG c.s.e.modules.sys.dao.UserDao.get@debug:181 - ==>  Preparing: select Id, Type, Password, Username, PhoneNumber, Email, QQ, Weixin, DeviceNo, Status, CreateTime, UpdateTime, UpdateUser from sys_user where id = ? 
+[2017-09-05 21:55:43.142] [bogon] [http-nio-8090-exec-5] DEBUG c.s.e.modules.sys.dao.UserDao.get@debug:181 - ==> Parameters: 0564f43ada5d48248b1d22f8b434d776(String)
+[2017-09-05 21:55:43.155] [bogon] [http-nio-8090-exec-5] DEBUG c.s.e.modules.sys.dao.UserDao.get@debug:181 - <==      Total: 1
+[2017-09-05 21:55:43.158] [bogon] [http-nio-8090-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils@closeSqlSession:191 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2391b046]
+[2017-09-05 21:55:43.158] [bogon] [http-nio-8090-exec-5] DEBUG o.s.jdbc.datasource.DataSourceUtils@doReleaseConnection:327 - Returning JDBC Connection to DataSource
+[2017-09-05 21:55:43.222] [bogon] [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor@writeWithMessageConverters:234 - Written [{"msg":"成功","data":{"id":"0564f43ada5d48248b1d22f8b434d776","type":2,"password":"839ABCC3D92882A091C80F31716F29A1","username":"t_test","phoneNumber":null,"email":null,"qq":null,"weixin":null,"deviceNo":null,"status":null,"roleList":null,"menuList":null,"teacher":null,"student":null,"page":null,"pageNumber":null,"pageSize":null,"createTime":null,"updateTime":null,"updateUser":null,"createUser":null},"status":"1"}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@c91f7d2]
+[2017-09-05 21:55:43.223] [bogon] [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet@processDispatchResult:1044 - Null ModelAndView returned to DispatcherServlet with name 'DispatcherServlet': assuming HandlerAdapter completed request handling
+[2017-09-05 21:55:43.223] [bogon] [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet@processRequest:1000 - Successfully completed request
+
